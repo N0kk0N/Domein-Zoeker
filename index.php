@@ -60,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <h1>Domein Zoeker</h1>
 
-    <!-- Link naar winkelmand zonder teller -->
     <p>
         <p>
     <a href="winkelmand.php">🛒 Winkelmand</a> | 
