@@ -1,5 +1,7 @@
 <?php
-// Functie om domeinen te zoeken, zoals eerder gemaakt
+session_start(); // ➤ Sessie starten voor winkelmand
+
+// Functie om domeinen te zoeken
 function zoekDomeinen($name, $extensions = ['com','nl','net','org','eu','info','biz','io','dev','shop']) {
     $url = "https://dev.api.mintycloud.nl/api/v2.1/domains/search?with_price=true";
     $apiKey = "072dee999ac1a7931c205814c97cb1f4d1261559c0f6cd15f2a7b27701954b8d";
@@ -41,6 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $results = zoekDomeinen($zoekterm);
     }
 }
+
+// Tel aantal items in winkelmand
+$cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Domein Zoeker</h1>
+
+    <!-- Link naar winkelmand -->
+    <p>
+        <a href="winkelmand.php">🛒 Winkelmand (<?= $cartCount ?>)</a>
+    </p>
+
     <form method="post" action="">
         <input type="text" name="domeinnaam" placeholder="Vul domeinnaam in" value="<?= htmlspecialchars($zoekterm) ?>" required>
         <button type="submit">Zoek</button>
