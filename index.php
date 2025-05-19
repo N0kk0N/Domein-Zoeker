@@ -43,9 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $results = zoekDomeinen($zoekterm);
     }
 }
-
-// Tel aantal items in winkelmand
-$cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 ?>
 
 <!DOCTYPE html>
@@ -57,9 +54,9 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 <body>
     <h1>Domein Zoeker</h1>
 
-    <!-- Link naar winkelmand -->
+    <!-- Link naar winkelmand zonder teller -->
     <p>
-        <a href="winkelmand.php">🛒 Winkelmand (<?= $cartCount ?>)</a>
+        <a href="winkelmand.php">🛒 Winkelmand</a>
     </p>
 
     <form method="post" action="">
