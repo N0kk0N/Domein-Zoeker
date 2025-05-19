@@ -1,0 +1,44 @@
+# === PHP-specific ===
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Composer
+vendor/
+composer.lock
+
+# === Database dumps ===
+*.sql
+*.sql.gz
+*.db
+
+# === Config files ===
+.env
+.env.*
+config.php
+dbconfig.php
+database.php
+*.ini
+
+# === IDEs & Editors ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Node/npm ===
+node_modules/
+npm-debug.log
+yarn.lock
+
+# === Cache directories ===
+.cache/
+tmp/
+temp/
