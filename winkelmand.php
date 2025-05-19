@@ -59,6 +59,7 @@ $totaal = $subtotaal + $btw;
 <head>
     <meta charset="UTF-8" />
     <title>Winkelmand</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Winkelmand</h1>

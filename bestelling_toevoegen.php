@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestelling verwerken</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <?php
+
 session_start();
 
 // Database connectie
@@ -19,11 +28,11 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $e) {
-    die("Database connectie mislukt: " . $e->getMessage());
+    die("<p>Database connectie mislukt: " . $e->getMessage() . "</p>");
 }
 
 if (empty($_SESSION['winkelmand'])) {
-    die("Winkelmand is leeg.");
+    die("<p>Winkelmand is leeg.</p>");
 }
 
 // Bereken subtotaal en btw
@@ -53,9 +62,13 @@ try {
     // Winkelmand leegmaken
     $_SESSION['winkelmand'] = [];
 
-    echo "Bestelling succesvol toegevoegd! <a href='bestellingen.php'>Bekijk bestellingen</a>";
+    echo "<p>Bestelling succesvol toegevoegd!</p>";
+    echo "<p><a href='bestellingen.php'>Bekijk bestellingen</a></p>";
 
 } catch (Exception $e) {
     $pdo->rollBack();
-    die("Fout bij opslaan bestelling: " . $e->getMessage());
+    die("<p>Fout bij opslaan bestelling: " . $e->getMessage() . "</p>");
 }
+?>
+</body>
+</html>

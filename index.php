@@ -54,74 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <head>
     <meta charset="UTF-8">
     <title>Domein Zoeker</title>
-    <style>
-        :root {
-            --background: #181a1b;
-            --foreground: #f3f3f3;
-            --accent: #2563eb;
-            --table-bg: #23272a;
-            --table-border: #333;
-            --button-bg: #2563eb;
-            --button-fg: #fff;
-            --button-disabled-bg: #444;
-        }
-        body {
-            background: var(--background);
-            color: var(--foreground);
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 2rem;
-        }
-        h1, h2 {
-            color: var(--accent);
-        }
-        table {
-            width: 100%;
-            background: var(--table-bg);
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        th, td {
-            border: 1px solid var(--table-border);
-            padding: 0.75rem;
-            text-align: left;
-        }
-        th {
-            background: #202225;
-        }
-        input[type="text"] {
-            background: #222;
-            color: var(--foreground);
-            border: 1px solid #333;
-            padding: 0.5rem;
-            border-radius: 4px;
-        }
-        button {
-            background: var(--button-bg);
-            color: var(--button-fg);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        button:disabled {
-            background: var(--button-disabled-bg);
-            color: #aaa;
-            cursor: not-allowed;
-        }
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            margin-right: 1rem;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        form {
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 </head>
 <body>

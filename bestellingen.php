@@ -30,6 +30,7 @@ $orders = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8" />
     <title>Bestellingen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Bestellingen</h1>
