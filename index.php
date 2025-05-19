@@ -56,7 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Link naar winkelmand zonder teller -->
     <p>
-        <a href="winkelmand.php">🛒 Winkelmand</a>
+        <p>
+    <a href="winkelmand.php">🛒 Winkelmand</a> | 
+    <a href="bestellingen.php">📄 Bestellingen</a>
+</p>
+
     </p>
 
     <form method="post" action="">
