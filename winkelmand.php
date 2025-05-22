@@ -6,7 +6,7 @@ if (!isset($_SESSION['winkelmand'])) {
     $_SESSION['winkelmand'] = [];
 }
 
-// Verwijderen van domein uit winkelmand (via GET parameter)
+// Verwijderen van domein uit winkelmand
 if (isset($_GET['verwijder'])) {
     $verwijderDomain = $_GET['verwijder'];
     foreach ($_SESSION['winkelmand'] as $key => $item) {
@@ -19,7 +19,7 @@ if (isset($_GET['verwijder'])) {
     }
 }
 
-// Toevoegen van domein aan winkelmand (via POST)
+// Toevoegen van domein aan winkelmand
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $domain = $_POST['domain'] ?? '';
     $price = floatval($_POST['price'] ?? 0);
